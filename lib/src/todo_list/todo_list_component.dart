@@ -10,14 +10,11 @@ import 'todo_list_service.dart';
   styleUrls: ['todo_list_component.css'],
   templateUrl: 'todo_list_component.html',
   directives: [
-    MaterialCheckboxComponent,
-    MaterialFabComponent,
-    MaterialIconComponent,
-    materialInputDirectives,
+    materialDirectives,
     NgFor,
     NgIf,
   ],
-  providers: [const ClassProvider(TodoListService)],
+  providers: [materialProviders, const ClassProvider(TodoListService)],
 )
 class TodoListComponent implements OnInit {
   final TodoListService todoListService;
